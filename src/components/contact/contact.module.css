@@ -1,0 +1,473 @@
+/* ===============================
+   GET IN TOUCH – Figma Exact
+================================ */
+
+.getInTouch {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 22px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #bda588;
+  margin-bottom: 16px;
+}
+
+/* ===============================
+   CONTACT PAGE WRAPPER
+================================ */
+
+.contactPage {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===============================
+   OFFICE INFO SECTION
+================================ */
+
+.officeGrid {
+  display: grid;
+  grid-template-columns: 1fr 711px;
+  gap: 64px;
+  align-items: start;
+  margin-bottom: 90px;
+}
+
+/* MAIN HEADING – Figma Exact */
+
+.officeHeading {
+  font-family: "DM Serif Display", serif;
+  font-weight: 1000;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0;
+  color: #173e62;
+  margin: 0 0 32px 0;
+}
+
+/* HEAD OFFICE – Figma Exact */
+
+.headOffice {
+  font-family: "DM Serif Display", serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0;
+  color: #173e62;
+  margin-bottom: 16px;
+}
+
+/* OFFICE ADDRESS – Figma Exact */
+
+.officeAddress {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26.25px;
+  letter-spacing: 0;
+  color: #66717a;
+}
+
+/* EMAIL & PHONE – Figma Exact */
+
+.officeContact {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26.25px;
+  letter-spacing: 0;
+  color: #66717a;
+}
+.icon {
+  font-size: 16px;
+  line-height: 1;
+  margin-top: 5px;
+  flex-shrink: 0; /* aligns with text baseline */
+}
+
+
+/* Office Info Box */
+
+.officeBox {
+  padding: 22px 0; /* keep spacing, remove box look */
+  background: transparent;
+  max-width: 520px;
+}
+
+.officeRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.officeRow:last-child {
+  margin-bottom: 0;
+}
+
+.officeRow p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* ===============================
+   MAP
+================================ */
+
+.mapWrapper {
+  width: 711px;
+  height: 432px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ===============================
+   FORM + TEAM SECTION
+================================ */
+/* LEAVE A MESSAGE – Figma Exact */
+
+.leaveMessage {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 22px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #bda588;
+  margin-bottom: 12px;
+}
+
+.formSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* CONTACT FORM WRAPPER */
+
+.contactForm {
+  max-width: 520px;
+}
+
+/* FORM HEADING */
+
+.formHeading {
+  font-family: "DM Serif Display", serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0;
+  color: #173e62;
+  margin-bottom: 32px;
+}
+/* FORM ELEMENTS */
+
+.form {
+  margin-top: 10px;
+}
+
+/* ===============================
+   FORM INPUTS (Name, Email, Subject)
+================================ */
+
+.formInput {
+  width: 100%;
+  height: 52px;
+  padding: 0 12px;
+  margin-bottom: 38px;
+  border: 1px solid #767676;
+  border-radius: 2.5px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #66717a;
+  outline: none;
+  background: #ffffff;
+}
+
+.formInput::placeholder {
+  color: #9ca3af;
+}
+
+.formInput:focus {
+  border-color: #bda588;
+}
+
+/* ===============================
+   MESSAGE TEXTAREA – Figma Exact
+================================ */
+
+.formTextarea {
+  width: 654px;
+  height: 168px;
+  padding: 12px;
+  margin-bottom: 36px;
+  border: 1px solid #767676;
+  border-radius: 2.5px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #66717a;
+  outline: none;
+  resize: none;
+  background: #ffffff;
+}
+
+.formTextarea::placeholder {
+  color: #9ca3af;
+}
+
+.formTextarea:focus {
+  border-color: #bda588;
+}
+
+
+/* SUBMIT BUTTON */
+
+.submitBtn {
+  height: 60px;
+  padding: 0 42px;              /* keeps width flexible */
+  background: #bda588;
+  border: 1px solid #bda588;
+  border-radius: 3px;
+
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional hover (clean & professional) */
+.submitBtn:hover {
+  opacity: 0.9;
+}
+
+/* ===============================
+   TEAM CONTACT CARDS
+================================ */
+
+.teamCard {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.teamCard img {
+  width: 96px;
+  height: 96px;
+  border-radius: 48%;
+  object-fit: cover;
+}
+
+.teamCard h4 {
+  font-size: 15px;
+  margin: 0 0 4px;
+  color: #173e62;
+}
+
+.teamCard p {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 2px 0;
+}
+
+/* TEAM MEMBER NAME – Figma Exact */
+
+.teamName {
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22.5px;
+  letter-spacing: 0;
+  color: #173e62;
+
+  margin: 0 0 6px 0; /* spacing before role */
+}
+
+/* TEAM MEMBER ROLE – Figma Exact */
+
+.teamRole {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 300;
+  font-size: 14.4px;
+  line-height: 28.8px;
+  letter-spacing: 0;
+  color: #66717a;
+
+  margin: 0 0 6px 0;
+}
+.teamContact {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 300;
+  font-size: 14.4px;
+  line-height: 28.8px;
+  letter-spacing: 0;
+  color: #66717a;
+  margin: 0;
+}
+
+
+/* ===============================
+   MOBILE RESPONSIVE – CONTACT PAGE
+================================ */
+
+@media (max-width: 768px) {
+
+  /* PAGE PADDING */
+  .contactPage {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  /* OFFICE GRID STACK */
+  .officeGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  /* HEADINGS */
+  .officeHeading {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 24px;
+  }
+
+  .headOffice {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  /* OFFICE INFO */
+  .officeBox {
+    max-width: 100%;
+  }
+
+  .officeRow {
+    align-items: flex-start;
+  }
+
+  /* MAP */
+  .mapWrapper {
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+  }
+
+  /* FORM + TEAM STACK */
+  .formSection {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  /* FORM */
+  .contactForm {
+    max-width: 100%;
+  }
+
+  .formHeading {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 24px;
+  }
+
+  /* INPUTS */
+  .formInput {
+    margin-bottom: 28px;
+    font-size: 16px; /* prevents iOS zoom */
+  }
+
+  /* TEXTAREA */
+  .formTextarea {
+    width: 100%;
+    height: 220px;
+    font-size: 16px;
+  }
+
+  /* BUTTON */
+  .submitBtn {
+    width: 100%;
+    height: 56px;
+  }
+
+  /* TEAM CONTACTS */
+  .teamCard {
+    gap: 14px;
+  }
+
+  .teamCard img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .teamName {
+    font-size: 17px;
+  }
+    /* FIX ICON ALIGNMENT (LOCATION / EMAIL / PHONE) */
+
+  .officeRow {
+    align-items: flex-start; /* allow multi-line text */
+  }
+
+  .icon {
+    width: 20px;
+    height: 26px;          /* same as text line-height */
+    display: flex;
+    align-items: center;   /* center icon vertically */
+    justify-content: center;
+    flex-shrink: 0;        /* prevent icon from shrinking */
+  }
+
+  .officeAddress,
+  .officeContact {
+    margin: 0;             /* remove default <p> spacing */
+  }
+
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1024px) {
+  .officeGrid,
+  .formSection {
+    grid-template-columns: 1fr;
+  }
+
+  .officeHeading {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+   .mapWrapper {
+    width: 100%;
+    height: 360px;
+    margin-top: 40px;
+  }
+}
