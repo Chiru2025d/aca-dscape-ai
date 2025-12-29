@@ -7,12 +7,12 @@ import Footer from "../footer.jsx";
 import Hero from "./hero.jsx";
 
 // Lazy load below-fold sections
-const About = dynamic(() => import("./about.jsx"), { loading: () => <div /> });
-const Culture = dynamic(() => import("./client-cause.jsx"), { loading: () => <div /> });
-const ExpertisePreview = dynamic(() => import("./our-expertise.jsx"), { loading: () => <div /> });
-const Founder = dynamic(() => import("./founder.jsx"), { loading: () => <div /> });
-const TeamPreview = dynamic(() => import("./team.jsx"), { loading: () => <div /> });
-const LegalUpdatesPreview = dynamic(() => import("./legal-updates.jsx"), { loading: () => <div /> });
+const About = dynamic(() => import("./about.jsx"), { ssr: true });
+const Culture = dynamic(() => import("./client-cause.jsx"), { ssr: true });
+const ExpertisePreview = dynamic(() => import("./our-expertise.jsx"), { ssr: true });
+const Founder = dynamic(() => import("./founder.jsx"), { ssr: true });
+const TeamPreview = dynamic(() => import("./team.jsx"), { ssr: true });
+const LegalUpdatesPreview = dynamic(() => import("./legal-updates.jsx"), { ssr: true });
 
 export default function HomePage() {
   return (
