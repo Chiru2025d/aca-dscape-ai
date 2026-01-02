@@ -120,6 +120,8 @@ export default function TeamPreview() {
                         height={265}
                         className="team-img"
                         style={{ objectFit: 'cover' }}
+                        quality={90}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       />
                       <div className="team-overlay">
                         <p className="team-phone">{member.phone}</p>

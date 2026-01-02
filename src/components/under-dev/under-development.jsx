@@ -20,7 +20,8 @@ export default function UnderDevelopment() {
                         fill
                         style={{ objectFit: 'contain' }}
                         priority
-                        srcSet="/images/page_under_devlopment@2x.webp 2x, /images/page_under_devlopment@3x.webp 3x"
+                        quality={90}
+                        sizes="(max-width: 768px) 100vw, 800px"
                     />
                 </div>
             </div>

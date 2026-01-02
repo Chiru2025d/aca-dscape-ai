@@ -43,6 +43,8 @@ export default function TeamContacts() {
               alt={member.name}
               width={60}
               height={60}
+              quality={90}
+              sizes="60px"
             />
           </div>
 

@@ -25,7 +25,7 @@ export default function OfficeInfo() {
             {/* ADDRESS */}
             <div className={styles.officeRow}>
               <span className={styles.icon}>
-                <Image src="/icons/location.svg" alt="" width={18} height={18} />
+                <Image src="/icons/location.svg" alt="" width={18} height={18} quality={90} sizes="18px" />
               </span>
               <p className={styles.officeAddress}>
                 ACA Juris, ‘Srishti’, 21/4, Craig Park Layout,
@@ -37,7 +37,7 @@ export default function OfficeInfo() {
             {/* EMAIL */}
             <div className={styles.officeRow}>
               <span className={styles.icon}>
-                <Image src="/icons/mail.svg" alt="" width={18} height={18} />
+                <Image src="/icons/mail.svg" alt="" width={18} height={18} quality={90} sizes="18px" />
               </span>
               <p className={styles.officeContact}>office@acajuris.com</p>
             </div>
@@ -45,7 +45,7 @@ export default function OfficeInfo() {
             {/* PHONE */}
             <div className={styles.officeRow}>
               <span className={styles.icon}>
-                <Image src="/icons/call.svg" alt="" width={18} height={18} />
+                <Image src="/icons/call.svg" alt="" width={18} height={18} quality={90} sizes="18px" />
               </span>
               <p className={styles.officeContact}>+91 96638 12090</p>
             </div>

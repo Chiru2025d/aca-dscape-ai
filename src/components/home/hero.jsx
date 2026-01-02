@@ -112,6 +112,8 @@ export default function Hero() {
                 fill
                 className={`hero-bg-image ${(slide.src.includes('Frame-2') || (isMobile && slide.mobileSrc && slide.mobileSrc.includes('Frame-2_mob'))) ? 'hero-frame-2' : ''}`}
                 priority={idx === 0}
+                sizes="100vw"
+                quality={90}
               />
             </div>
           ))}
