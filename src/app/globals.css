@@ -190,7 +190,7 @@ h6 {
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
   .logo-img {
-    width: 160px;
+    width: 120px;
     height: auto;
   }
 
@@ -249,8 +249,8 @@ h6 {
 
 @media screen and (max-width: 480px) {
   .logo-img {
-    width: 180px;
-    height: 57px;
+    width: 110px;
+    height: auto;
     object-fit: contain;
   }
 
