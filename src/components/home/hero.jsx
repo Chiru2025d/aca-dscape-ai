@@ -27,7 +27,7 @@ export default function Hero() {
       id: 3,
       src: "/images/Frame-3@2x.webp",
       srcSet: "/images/Frame-3@2x.webp 2x, /images/Frame-3@3x.webp 3x",
-      mobileSrc: "/images/Frame-3_mob.svg",
+      mobileSrc: "/images/Frame 1984078246.png",
       type: "text-overlay",
       styleId: "frame-3",
       title: "Driven by a Culture",
