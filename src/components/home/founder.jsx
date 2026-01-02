@@ -95,7 +95,7 @@ export default function Founder() {
                         <span className="hidetext">&nbsp;</span>
                         <h2 className="hidetext">&nbsp;</h2>
                         <span className="hidetext">&nbsp;</span>
-                        <div style={{ width: '100%', position: 'relative' }}>
+                        <div style={{ width: '100%', height: '100%', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <Image
                                 src="/images/amar@2x.webp"
                                 alt="Amar Correa"
@@ -103,7 +103,7 @@ export default function Founder() {
                                 height={600}
                                 quality={90}
                                 sizes="(max-width: 768px) 100vw, 450px"
-                                style={{ width: '100%', height: 'auto', display: 'block' }}
+                                style={{ width: '100%', height: 'auto', display: 'block', maxWidth: '450px' }}
                             />
                         </div>
                     </div>

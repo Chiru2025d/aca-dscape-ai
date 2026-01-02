@@ -1309,6 +1309,11 @@
 
 .founder-img-wrap {
     flex: 0 0 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    height: 100%;
 }
 
 .founder-img-wrap img {
@@ -1316,6 +1321,8 @@
     height: auto;
     border-radius: 6px;
     box-shadow: none;
+    max-width: 450px;
+    display: block;
 }
 
 /* --- Tablet (Max Width: 1024px) --- */
