@@ -8,7 +8,7 @@ export default function Hero() {
     {
       id: 1,
       src: "/images/Frame-1.svg",
-      mobileSrc: "/images/Frame-1_mob.svg",
+      mobileSrc: "/images/Frame-1_mob.png",
       type: "default",
       styleId: "frame-1",
     },
