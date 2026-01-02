@@ -22,7 +22,7 @@ export default function Header() {
         <div className="header-left">
           <Link href="/">
             <Image
-              src="/images/aca-headerlogo.svg"
+              src="/images/ACA_Logo-05 1.png"
               alt="ACA Juris Logo"
               width={222}
               height={71}
