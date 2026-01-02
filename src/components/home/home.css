@@ -1222,6 +1222,7 @@
 
 .founder-section .container {
     max-width: 1430px;
+    padding: 0 40px;
 }
 
 .founder-inner {
@@ -1314,15 +1315,17 @@
     justify-content: center;
     min-height: 600px;
     height: 100%;
+    background-color: #ffffff;
+    overflow: hidden;
 }
 
 .founder-img-wrap img {
     width: 100%;
-    height: auto;
-    border-radius: 6px;
+    height: 100%;
     box-shadow: none;
     max-width: 450px;
     display: block;
+    object-fit: cover;
 }
 
 /* --- Tablet (Max Width: 1024px) --- */
