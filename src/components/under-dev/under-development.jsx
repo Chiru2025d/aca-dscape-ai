@@ -15,11 +15,12 @@ export default function UnderDevelopment() {
             }}>
                 <div style={{ position: 'relative', width: '100%', maxWidth: '800px', height: 'auto', aspectRatio: '16/9' }}>
                     <Image
-                        src="/images/page_under_devlopment.png"
+                        src="/images/page_under_devlopment@2x.webp"
                         alt="Page Under Development"
                         fill
                         style={{ objectFit: 'contain' }}
                         priority
+                        srcSet="/images/page_under_devlopment@2x.webp 2x, /images/page_under_devlopment@3x.webp 3x"
                     />
                 </div>
             </div>

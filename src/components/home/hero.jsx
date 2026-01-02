@@ -14,8 +14,10 @@ export default function Hero() {
     },
     {
       id: 2,
-      src: "/images/Frame-2.png",
-      mobileSrc: "/images/Frame-2_mob.png",
+      src: "/images/Frame-2@2x.webp",
+      srcSet: "/images/Frame-2@2x.webp 2x, /images/Frame-2@3x.webp 3x",
+      mobileSrc: "/images/Frame-2_mob@2x.webp",
+      mobileSrcSet: "/images/Frame-2_mob@2x.webp 2x, /images/Frame-2_mob@3x.webp 3x",
       type: "text-overlay",
       styleId: "frame-2",
       title: "Criminal Law Specialised",
@@ -23,7 +25,8 @@ export default function Hero() {
     },
     {
       id: 3,
-      src: "/images/Frame-3.png",
+      src: "/images/Frame-3@2x.webp",
+      srcSet: "/images/Frame-3@2x.webp 2x, /images/Frame-3@3x.webp 3x",
       mobileSrc: "/images/Frame-3_mob.svg",
       type: "text-overlay",
       styleId: "frame-3",
