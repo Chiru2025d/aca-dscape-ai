@@ -229,7 +229,7 @@
 
 .hero-dots {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -298,12 +298,12 @@
     .hero-content {
         position: relative;
         height: auto;
-        padding: 0px 0px 0px;
-        /* Adjusted top padding since dots are above now */
+        padding: 0 !important;
+        margin: -50px 0 0 0 !important;
         align-items: center;
         justify-content: flex-start;
         text-align: center;
-        background-color: #FDFBF7;
+        /* background-color: #FDFBF7; */
         order: 3;
     }
 
@@ -371,7 +371,6 @@
     }
 
     .hero-dots {
-        bottom: 20px;
         gap: 10px;
     }
 
@@ -709,15 +708,15 @@
     }
 
     .hero-dots {
-        position: relative;
+        /* position: relative; */
         top: auto;
-        bottom: auto;
+        /* bottom: auto; */
         left: auto;
         transform: none;
         width: 100%;
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        /* margin-top: 20px; */
         order: 2;
     }
 
@@ -819,21 +818,20 @@
 .about-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 0 0 20px;
+    padding: 0px 20px 0 20px;
     text-align: left;
 }
 
 .about-content h2 {
     font-family: 'Be Vietnam', sans-serif;
-    font-size: 27px;
+    font-size: 25px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 44px;
     color: #3A3A3A;
     text-align: center;
     margin-bottom: 20px;
 }
-
 .about-content p {
     max-width: 100%;
     margin: 0 0 30px 0;
@@ -884,13 +882,13 @@
     }
 
     .about-content h2 {
-        font-size: 26px;
+        font-size: 23px;
         line-height: normal;
     }
 
     .about-content p {
-        font-size: 16px;
-        text-align: left;
+        font-size: 15px;
+        /* text-align: left; */
         /* text-align: justify; */
     }
 }
@@ -1302,6 +1300,7 @@
     border-radius: 4px;
     margin-bottom: 15px;
     position: relative;
+    border: 3px solid #000000;
 }
 
 .img-wrap img {
@@ -1468,7 +1467,7 @@
     max-width: 97%;
     margin-bottom: 24px;
     font-family: "Be Vietnam", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 300;
     line-height: 25px;

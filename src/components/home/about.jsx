@@ -8,7 +8,7 @@ export default function About() {
   return (
     <section className="about-wrapper">
       <div className="container">
-        <div className="about-bg">`   `
+        <div className="about-bg">
           <div className="about-content">
             <h2>Amar Correa Associates, Juris</h2>
 
