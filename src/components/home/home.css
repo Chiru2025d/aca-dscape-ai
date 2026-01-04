@@ -882,13 +882,20 @@
     }
 
     .about-content h2 {
-        font-size: 22px;
-        line-height: normal;
+        font-size: 25px;
+        font-style: normal;
+        line-height: 44px;
+        color: #3a3a3a;
+        /* text-align:center; */
+        margin-bottom: 20px;
     }
 
     .about-content p {
-        font-size: 15px;
-        /* text-align: left; */
+        max-width: 100%;
+        margin: 0 0 30px;
+        color: #4f4f4f;
+        font-size: 16px;
+        line-height: 26px;
         /* text-align: justify; */
     }
 }
