@@ -882,7 +882,7 @@
     }
 
     .about-content h2 {
-        font-size: 23px;
+        font-size: 22px;
         line-height: normal;
     }
 
@@ -1084,7 +1084,7 @@
 }
 
 .culture-card-desc {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Be Vietnam', sans-serif;
     font-size: 15px;
     line-height: 27px;
     letter-spacing: 0.5px;
@@ -1118,7 +1118,7 @@
 
     .culture-heading {
         text-align: center;
-        font-size: 24px;
+        font-size: 22px;
         margin-bottom: 30px;
         padding: 0 20px;
     }
@@ -1206,7 +1206,7 @@
 
     .culture-mobile-card {
         /* width: 100%; */
-        max-width: 391px;
+        max-width: 348px;
         height: auto;
         border-radius: 16px;
         /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
@@ -1448,28 +1448,25 @@
 }
 
 .founder-role {
-    color: #4f4f4f;
-    text-align: justify;
     margin-top: 0;
     margin-bottom: 10px;
-    font-family: Be Vietnam, sans-serif;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 300;
     line-height: 27px;
     display: block;
 }
 
-.founder-bio {
-    color: rgb(79, 79, 79);
+.founder-bio, .founder-role {
+    color: #4f4f4f;
     text-align: justify;
-    letter-spacing: 0.16px;
-    max-width: 97%;
-    margin-bottom: 24px;
-    font-family: "Be Vietnam", sans-serif;
+    font-family: Be Vietnam, sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
+}
+
+.founder-bio {
+    letter-spacing: 0.16px;
+    /* max-width: 97%; */
+    margin-bottom: 24px;
     line-height: 25px;
 }
 
@@ -1608,7 +1605,7 @@
     }
 
     .founder-bio {
-        text-align: left;
+        /* text-align: left; */
         font-size: 14px;
         line-height: 1.6;
     }
