@@ -146,8 +146,13 @@
 }
 
 .hero-bg-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
+    color: transparent;
 }
 
 .hero-slider-track {
@@ -174,17 +179,52 @@
 
 .hero-content {
     position: relative;
-    z-index: 2;
-    height: 100%;
+    height: auto;
+    /* Adjusted top padding since dots are above now */
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    background-color: #FDFBF7;
+    order: 3;
+}
+
+.hero-button-overlay {
+    position: absolute;
+    /* left: 654px; */
+    top: 475px;
+    z-index: 10;
+}
+
+.hero-practice-btn {
     display: flex;
-    align-items: flex-start;
+    width: 134px;
+    height: 38px;
+    padding: 0px 6px 0 6px;
     justify-content: flex-end;
-    width: 100%;
-    max-width: 1240px;
-    margin: 0 auto;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-top: 80px;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid #FFF;
+    background: #000;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+.hero-practice-btn:hover {
+    background-color: #C5A065;
+    border-color: #C5A065;
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+.hero-practice-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero-dots {
@@ -207,6 +247,138 @@
 
 .hero-dot.active {
     background-color: #000;
+}
+
+/* --- Tablet (Max Width: 1024px) --- */
+@media screen and (max-width: 1024px) {
+    .hero-wrapper {
+        height: 500px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 40px;
+        padding-top: 60px;
+        padding-right: 20px;
+    }
+
+    .hero-button-overlay {
+        left: 50%;
+        top: 70%;
+        transform: translateX(-50%);
+    }
+
+    .hero-practice-btn {
+        width: 120px;
+        height: 36px;
+        font-size: 11px;
+        padding: 0 6px 0 100px;
+    }
+
+    .hero-dots {
+        bottom: 15px;
+        gap: 15px;
+    }
+
+    .hero-dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* --- Mobile (Max Width: 768px) --- */
+@media screen and (max-width: 768px) {
+    .hero-wrapper {
+        height: 460px;
+        min-height: 360px;
+    }
+
+    .hero-content {
+        position: relative;
+        height: auto;
+        padding: 0px 0px 0px;
+        /* Adjusted top padding since dots are above now */
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        background-color: #FDFBF7;
+        order: 3;
+    }
+
+    .hero-button-overlay {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
+    .hero-practice-btn {
+        width: 140px;
+        height: 42px;
+        font-size: 11px;
+        padding: 0 16px;
+        border-radius: 4px;
+        justify-content: center;
+    }
+
+    .hero-text-overlay.frame-2,
+    .hero-text-overlay.frame-3 {
+        display: none;
+    }
+
+    .hero-dots {
+        bottom: 24px;
+        gap: 12px;
+    }
+
+    .hero-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .hero-right {
+        display: none;
+    }
+}
+
+/* --- Small Mobile (Max Width: 480px) --- */
+@media screen and (max-width: 480px) {
+    .hero-wrapper {
+        height: 420px;
+        min-height: 320px;
+    }
+
+    .hero-content {
+        padding: 0 16px;
+    }
+
+    .hero-button-overlay {
+        left: 50%;
+        top: auto;
+        bottom: 88px;
+        transform: translateX(-50%);
+    }
+
+    .hero-practice-btn {
+        width: 132px;
+        height: 40px;
+        font-size: 9px;
+        padding: 0 14px;
+    }
+
+    .hero-dots {
+        bottom: 20px;
+        gap: 10px;
+    }
+
+    .hero-dot {
+        width: 7px;
+        height: 7px;
+    }
 }
 
 .hero-right {
@@ -329,27 +501,27 @@
     border: 1px solid var(--color-dark);
     width: 118px;
     height: 38px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: var(--font-body);
-    font-size: 12px;
     text-transform: capitalize;
-    letter-spacing: 0.5px;
+    letter-spacing: .5px;
     cursor: pointer;
-    border-radius: 0px;
-    transition: all 0.3s ease;
-    font-weight: 500;
     white-space: nowrap;
+    border-radius: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all .3s;
+    display: flex
 }
 
 .hero-btn:hover {
-    transform: translateY(-2px);
     background-color: var(--color-accent);
     border-color: var(--color-accent);
     color: var(--color-white);
-    box-shadow: 0 4px 15px rgba(197, 160, 101, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px #c5a0654d
 }
 
 .hero-frame-2 {
@@ -482,7 +654,6 @@
         height: auto !important;
         min-height: auto;
         padding: 0;
-        display: flex;
         flex-direction: column;
     }
 
@@ -654,7 +825,7 @@
 
 .about-content h2 {
     font-family: 'Be Vietnam', sans-serif;
-    font-size: 31px;
+    font-size: 27px;
     font-style: normal;
     font-weight: 500;
     line-height: 44px;
@@ -741,8 +912,8 @@
 
 .culture-heading {
     font-family: 'Be Vietnam', sans-serif;
-    font-size: 30.3px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 400;
     color: #1A1A1A;
     margin-bottom: 40px;
     padding-bottom: 0;
@@ -1026,6 +1197,22 @@
         text-align: left;
         width: 100%;
     }
+
+    .culture-mobile-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 0 20px;
+    }
+
+    .culture-mobile-card {
+        /* width: 100%; */
+        max-width: 391px;
+        height: auto;
+        border-radius: 16px;
+        /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+    }
 }
 
 
@@ -1086,8 +1273,8 @@
 
 .expertise-left h3 {
     font-family: 'Be Vietnam', sans-serif;
-    font-size: 45px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 500;
     color: #1A1A1A;
     margin-bottom: 20px;
     text-transform: none;
@@ -1308,25 +1495,25 @@
 
 
 .founder-img-wrap {
-    flex: 0 0 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* flex: 0 0 450px; */
+    /* display: flex; */
+    align-items: flex-start;
+    justify-content: flex-start;
     min-height: 600px;
     height: 100%;
-    background-color: #f5f5f5;
-    border-radius: 6px;
-    overflow: hidden;
+    background-color: transparent;
+    border-radius: 0;
+    overflow: visible;
+    --founder-img-width: 423px;
+    --founder-img-height: 475px;
 }
 
 .founder-img-wrap img {
     width: 100%;
-    height: 100%;
-    border-radius: 6px;
+    height: 467px;
     box-shadow: none;
-    max-width: 450px;
-    display: block;
-    object-fit: cover;
+    object-fit: contain;
+    border-radius: 6px;
 }
 
 /* --- Tablet (Max Width: 1024px) --- */
@@ -1334,20 +1521,35 @@
     .founder-inner {
         width: 100%;
         height: auto;
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 40px;
+        gap: 30px;
+    }
+
+    .founder-text {
+        width: 100%;
+    }
+
+    .founder-name {
+        font-size: 32px;
     }
 
     .founder-img-wrap {
         flex: 0 0 auto;
         width: 100%;
-        max-width: 450px;
+        max-width: 500px;
         height: auto;
-        min-height: 350px;
         margin: 0 auto;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .founder-img-wrap img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 423/475;
     }
 }
 
@@ -1362,48 +1564,111 @@
     }
 
     .founder-inner {
-        padding: 30px;
+        padding: 30px 20px;
         gap: 30px;
+        flex-direction: column;
+    }
+
+    .founder-text {
+        width: 100%;
+    }
+
+    .founder-label {
+        font-size: 12px;
+    }
+
+    .founder-name {
+        font-size: 28px;
     }
 
     .founder-img-wrap {
         order: -1;
         flex: none;
         width: 100%;
-        max-width: 100%;
         height: auto;
-        min-height: 300px;
+        min-height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 20px;
+        background-color: transparent;
+        border-radius: 0;
+        overflow: visible;
     }
 
     .founder-img-wrap img {
         width: 100%;
         height: auto;
         max-width: 100%;
+        aspect-ratio: 423/475;
+        /* object-fit: contain; */
     }
 
-    .hidetext{
+    .hidetext {
         display: none;
     }
-    .founder-text {
-        width: 100%;
-    }
-    .founder-bio{
+
+    .founder-bio {
         text-align: left;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .founder-bio-container {
+        max-height: none;
     }
 }
 
 /* --- Small Mobile (Max Width: 480px) --- */
 @media screen and (max-width: 480px) {
+    .founder-section {
+        padding: 30px 0;
+    }
+
+    .founder-section .container {
+        padding: 0 16px;
+    }
+
+    .founder-inner {
+        padding: 20px 16px;
+        gap: 20px;
+    }
+
     .founder-text {
         padding-top: 0;
     }
 
+    .founder-label {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .founder-name {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .founder-role {
+        font-size: 14px;
+    }
+
+    .founder-img-wrap {
+        margin-bottom: 15px;
+    }
+
+    .founder-img-wrap img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .founder-bio {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+
     .founder-bio-container {
-        max-height: 300px;
+        max-height: 250px;
     }
 }
 
@@ -1846,10 +2111,10 @@
 
 .contact-link-title {
     font-family: 'Be Vietnam', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     color: #1A1A1A;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     display: flex;
     align-items: baseline;
     gap: 10px;

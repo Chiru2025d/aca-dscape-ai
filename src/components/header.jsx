@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LatestUpdates from "./latestupdate";
 import "../app/globals.css"
 
@@ -12,6 +12,39 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openParent, setOpenParent] = useState(null);
   const [openChild, setOpenChild] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Ensure header starts hidden on the first hero slide (home page only)
+  useEffect(() => {
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    if (pathname === "/") {
+      header.classList.add('hero-first-slide');
+    } else {
+      header.classList.remove('hero-first-slide');
+    }
+  }, [pathname]);
+
+  // Track scroll to show header when user scrolls
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Update header class based on scroll state
+  useEffect(() => {
+    const header = document.querySelector('header');
+    if (header) {
+      if (isScrolled) {
+        header.classList.remove('hero-first-slide');
+      }
+    }
+  }, [isScrolled]);
 
 
   return (

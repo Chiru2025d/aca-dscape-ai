@@ -1,19 +1,29 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export default function Culture() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef(null);
   const intervalRef = useRef(null);
+
+  // Detect mobile viewport
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const cards = [
     {
       title: <>A Core<br />Culture</>,
       icon: "/icons/culture.svg",
       desc:
-        "… designed and embraced, that drives the Firm’s Associates to focus on the Client’s cause with unwavering commitment.",
+        "… designed and embraced, that drives the Firm's Associates to focus on the Client's cause with unwavering commitment.",
     },
     {
       title: <>Our Core<br />Services</>,
@@ -37,7 +47,6 @@ export default function Culture() {
 
    /* 👀 Viewport detection */
   useEffect(() => {
-    console.log("1")
     const observer = new IntersectionObserver(
       ([entry]) => setIsVisible(entry.isIntersecting),
       { threshold: 0.4 }
@@ -50,7 +59,6 @@ export default function Culture() {
 
   /* ⏱ Auto rotate cards */
   useEffect(() => {
-     console.log("2")
     if (isVisible) {
       intervalRef.current = setInterval(() => {
         setActiveIndex(prev => (prev + 1) % cards.length);
@@ -66,15 +74,24 @@ export default function Culture() {
   return (
     <section className="culture-section"  ref={sectionRef}>
       <h2 className="culture-heading">
-        Driven by a culture committed to our client’s cause
+        Driven by a culture committed to our client's cause
       </h2>
 
-      <div className="culture-outer">
+      {/* Mobile: Show static card images */}
+      {isMobile ? (
+        <div className="culture-mobile-images">
+          <Image src="/images/A Core Culture.png" alt="A Core Culture" width={720} height={840} className="culture-mobile-card" />
+          <Image src="/images/A Core Services.png" alt="A Core Services" width={720} height={840} className="culture-mobile-card" />
+          <Image src="/images/Across the Board.png" alt="Across the Board" width={720} height={840} className="culture-mobile-card" />
+          <Image src="/images/Our Core Expertise.png" alt="Our Core Expertise" width={720} height={840} className="culture-mobile-card" />
+        </div>
+      ) : (
+        /* Desktop: Show interactive cards */
+        <div className="culture-outer">
         {cards.map((card, index) => (
           <div
             key={index}
-            className={`culture-card ${activeIndex === index ? "active" : ""
-              }`}
+            className={`culture-card ${activeIndex === index ? "active" : ""}`}
             onMouseEnter={() => setActiveIndex(index)}
           >
             {/* Title - Moved to Top */}
@@ -91,7 +108,8 @@ export default function Culture() {
             </div>
           </div>
         ))}
-      </div>
+        </div>
+      )}
     </section>
   );
 }

@@ -8,7 +8,7 @@ export default function About() {
   return (
     <section className="about-wrapper">
       <div className="container">
-        <div className="about-bg">
+        <div className="about-bg">`   `
           <div className="about-content">
             <h2>Amar Correa Associates, Juris</h2>
 
@@ -16,7 +16,7 @@ export default function About() {
               <span style={{ color: '#4B4F58' }}>
                 <span style={{ fontFamily: "'Be Vietnam', sans-serif", fontWeight: 593}}>ACA</span>
                 <span style={{ fontWeight: 400 }}>Juris</span>
-                <span style={{ fontWeight: 300 }}>,</span>
+                <span style={{ fontWeight: 250 }}>,</span>
               </span> is a Bangalore-based multidisciplinary law firm with 
 a core focus on criminal law. Established in 2002, the firm brings over 25 years of dedicated 
 experience in advising and representing individual and corporate clients across all stages of 

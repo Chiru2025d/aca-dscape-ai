@@ -1,21 +1,22 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Hero() {
   const slides = [
     {
       id: 1,
-      src: "/images/Frame-1.svg",
+      src: "/images/Frame-1.png",
       mobileSrc: "/images/Frame-1_mob.png",
       type: "default",
       styleId: "frame-1",
     },
     {
       id: 2,
-      src: "/images/Frame-2@2x.webp",
-      srcSet: "/images/Frame-2@2x.webp 2x, /images/Frame-2@3x.webp 3x",
+      src: "/images/Frame-2.png",
+      srcSet: "/images/Frame-2.png",
       mobileSrc: "/images/Frame 1984078245.png",
       mobileSrcSet: "/images/Frame 1984078245.png",
       type: "text-overlay",
@@ -25,8 +26,8 @@ export default function Hero() {
     },
     {
       id: 3,
-      src: "/images/Frame-3@2x.webp",
-      srcSet: "/images/Frame-3@2x.webp 2x, /images/Frame-3@3x.webp 3x",
+      src: "/images/Frame-3.png",
+      srcSet: "/images/Frame-3.png",
       mobileSrc: "/images/Frame 1984078246.png",
       type: "text-overlay",
       styleId: "frame-3",
@@ -44,7 +45,7 @@ export default function Hero() {
   // Auto-play
   useEffect(() => {
     if (isAutoPlayPaused) return;
-    
+
     const interval = setInterval(() => {
       nextSlide();
     }, 5000);
@@ -59,6 +60,18 @@ export default function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Control header visibility based on slide index
+  useEffect(() => {
+    const header = document.querySelector('header');
+    if (header) {
+      if (currentIndex === 0) {
+        header.classList.add('hero-first-slide');
+      } else {
+        header.classList.remove('hero-first-slide');
+      }
+    }
+  }, [currentIndex]);
+
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % slides.length);
   };
@@ -67,12 +80,16 @@ export default function Hero() {
     setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  const pauseAutoPlay = () => setIsAutoPlayPaused(true);
+  const resumeAutoPlay = () => setIsAutoPlayPaused(false);
+
   // Swipe Handlers
   const minSwipeDistance = 50;
 
   const onTouchStart = (e) => {
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
+    pauseAutoPlay();
   };
 
   const onTouchMove = (e) => {
@@ -80,7 +97,11 @@ export default function Hero() {
   };
 
   const onTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
+    if (!touchStart || !touchEnd) {
+      resumeAutoPlay();
+      return;
+    }
+
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
@@ -91,6 +112,8 @@ export default function Hero() {
     if (isRightSwipe) {
       prevSlide();
     }
+
+    resumeAutoPlay();
   };
 
   return (
@@ -99,6 +122,8 @@ export default function Hero() {
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
+      onMouseEnter={pauseAutoPlay}
+      onMouseLeave={resumeAutoPlay}
     >
 
       {/* Background Image Carousel */}
@@ -125,47 +150,17 @@ export default function Hero() {
 
       {/* Content Overlay */}
       <div className="hero-content container">
-
-        {/* RIGHT SIDE TEXT (Left side removed as image fills background) */}
-        <div className="hero-right">
-          {slides[currentIndex].type === "default" && (
-            <>
-              <h1 className="law-title">LAW FIRM</h1>
-              <button className="hero-btn">Practice Areas →</button>
-            </>
-          )}
-
-          {slides[currentIndex].type === "text-overlay" && (
-            <div className={`hero-text-overlay ${slides[currentIndex].styleId || ''}`}>
-              <h2 className="overlay-title">{slides[currentIndex].title}</h2>
-              <h3 className="overlay-subtitle" style={{ whiteSpace: 'pre-line' }}>{slides[currentIndex].subtitle}</h3>
-            </div>
-          )}
-
+        <div 
+          className="hero-button-overlay"
+          style={{
+            left: '50%',
+            transform: 'translateX(-50%)'
+          }}
+        >
+          <Link href="/expertise">
+            <button className="hero-practice-btn">Practice Areas →</button>
+          </Link>
         </div>
-
-  
-        <div className="hero-contact-floating">
-          <div className="contact-text-block">
-            <span className="contact-title">Contact:</span>
-
-            <div className="contact-row">
-              <span className="contact-text">office@acajuris.com</span>
-              <a href="mailto:office@acajuris.com" className="contact-icon-bubble">
-                <Image src="/images/email.svg" alt="Email" width={20} height={20} />
-              </a>
-            </div>
-
-            <div className="contact-row">
-              <span className="contact-text">+(91) 96638 12090</span>
-              <a href="tel:+919663812090" className="contact-icon-bubble">
-                <Image src="/images/phone.svg" alt="Phone" width={20} height={20} />
-              </a>
-            </div>
-          </div>
-        </div>
-
-
       </div>
 
 
@@ -180,7 +175,10 @@ export default function Hero() {
           <span
             key={idx}
             className={`hero-dot ${currentIndex === idx ? 'active' : ''}`}
-            onClick={() => setCurrentIndex(idx)}
+            onClick={() => {
+              setCurrentIndex(idx);
+              resumeAutoPlay();
+            }}
             style={{ cursor: 'pointer' }}
           ></span>
         ))}

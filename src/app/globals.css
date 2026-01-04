@@ -110,6 +110,15 @@ h6 {
   right: 0;
   z-index: 1000;
   overflow: visible;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hide header on first hero slide */
+.hero-first-slide {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .header-inner {

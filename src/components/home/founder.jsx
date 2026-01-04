@@ -6,50 +6,49 @@ import Image from "next/image";
 export default function Founder() {
     const sectionRef = useRef(null);
     const bioRef = useRef(null);
-    // ... existing hook logic ...
-    useEffect(() => {
-        const section = sectionRef.current;
-        const bio = bioRef.current;
-        if (!section || !bio) return;
+    // useEffect(() => {
+    //     const section = sectionRef.current;
+    //     const bio = bioRef.current;
+    //     if (!section || !bio) return;
 
-        const handleWheel = (e) => {
-            // Check if section is approximately in view (basic check)
-            const rect = section.getBoundingClientRect();
-            const isInView = rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2;
+    //     const handleWheel = (e) => {
+    //         // Check if section is approximately in view (basic check)
+    //         const rect = section.getBoundingClientRect();
+    //         const isInView = rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2;
 
-            if (!isInView) return;
+    //         if (!isInView) return;
 
-            const { scrollTop, scrollHeight, clientHeight } = bio;
-            const delta = e.deltaY;
-            const isScrollingDown = delta > 0;
-            const isScrollingUp = delta < 0;
+    //         const { scrollTop, scrollHeight, clientHeight } = bio;
+    //         const delta = e.deltaY;
+    //         const isScrollingDown = delta > 0;
+    //         const isScrollingUp = delta < 0;
 
-            const isAtBottom = Math.abs(scrollHeight - clientHeight - scrollTop) < 1;
-            const isAtTop = scrollTop <= 0;
+    //         const isAtBottom = Math.abs(scrollHeight - clientHeight - scrollTop) < 1;
+    //         const isAtTop = scrollTop <= 0;
 
-            if ((isScrollingDown && !isAtBottom) || (isScrollingUp && !isAtTop)) {
-                e.preventDefault();
-                bio.scrollTop += delta;
-            }
-        };
+    //         if ((isScrollingDown && !isAtBottom) || (isScrollingUp && !isAtTop)) {
+    //             e.preventDefault();
+    //             bio.scrollTop += delta;
+    //         }
+    //     };
 
-        window.addEventListener('wheel', handleWheel, { passive: false });
+    //     window.addEventListener('wheel', handleWheel, { passive: false });
 
-        return () => {
-            window.removeEventListener('wheel', handleWheel);
-        };
-    }, []);
+    //     return () => {
+    //         window.removeEventListener('wheel', handleWheel);
+    //     };
+    // }, []);
 
     return (
-        <section className="founder-section py-5xl" ref={sectionRef}>
+        <section className="founder-section">
             <div className="container">
-                <div className="founder-inner gap-lg">
+                <div className="founder-inner">
                     <div className="founder-text">
                         <span className="founder-label">Head Associate</span>
-                        <h2 className="founder-name mb-md">Amar Correa</h2>
+                        <h2 className="founder-name">Amar Correa</h2>
                         <span className="founder-role">Amar Correa, heads ACA Juris.</span>
 
-                        <div className="founder-bio-container" ref={bioRef}>
+                        <div className="founder-bio-container">
                             <p className="founder-bio">
                                 A professional journey extending over 25 years, which began with engagements
                                 in criminal litigations at the grass roots level, before the Courts of Magistrates.
@@ -92,18 +91,11 @@ export default function Founder() {
                         </div>
                     </div>
 
-                    <div className="founder-img-wrap">
-                        {/* Using a placeholder or finding the image in the file list if available. 
-                Based on list: ammar.png or amar-correa.svg or amar.png seems likely key.
-                Let's try /images/amar.png based on file list.
-            */}
-                        <Image
-                            src="/images/amar.png"
-                            alt="Amar Correa"
-                            width={350}
-                            height={450}
-                            style={{ width: '100%', height: 'auto', maxWidth: '350px' }}
-                        />
+                    <div className="founder-img-wrap" style={{'--founder-img-width': '423px', '--founder-img-height': '475px'}}>
+                        <span className="hidetext">&nbsp;</span>
+                        <h2 className="hidetext">&nbsp;</h2>
+                        <span className="hidetext">&nbsp;</span>
+                        <img alt="Amar Correa" loading="lazy" width="400" height="600" decoding="async" data-nimg="1" className="founderImg" style={{color:'transparent',width:'100%',padding:'25px'}} src="/images/amar.png" />
                     </div>
                 </div>
             </div>
