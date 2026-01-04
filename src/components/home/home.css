@@ -822,11 +822,14 @@
     text-align: left;
 }
 
+.about-content h2, .about-content p {
+    font-family: Be Vietnam, sans-serif;
+    font-weight: 400;
+}
+
 .about-content h2 {
-    font-family: 'Be Vietnam', sans-serif;
     font-size: 25px;
     font-style: normal;
-    font-weight: 300;
     line-height: 44px;
     color: #3A3A3A;
     text-align: center;
@@ -882,11 +885,10 @@
     }
 
     .about-content h2 {
-        font-size: 25px;
+        font-size: 22px;
         font-style: normal;
         line-height: 44px;
         color: #3a3a3a;
-        /* text-align:center; */
         margin-bottom: 20px;
     }
 
@@ -896,6 +898,7 @@
         color: #4f4f4f;
         font-size: 16px;
         line-height: 26px;
+        text-align: left;
         /* text-align: justify; */
     }
 }
