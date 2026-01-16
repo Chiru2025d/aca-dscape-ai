@@ -24,10 +24,10 @@ export default function LegalUpdatesPreview() {
               />
             </div>
             <div className="legal-content">
-              {/* <div className="update-meta">
-                <span>Graphic design</span>
+              <div className="update-meta">
                 <span>August 28, 2025</span>
-              </div> */}
+                <span>Name</span>
+              </div>
               <h4 className="update-title">An Incorrect View On Trial Court’s Powers U/S 173(8) Cr.P.C</h4>
             </div>
           </div>
@@ -44,10 +44,10 @@ export default function LegalUpdatesPreview() {
               />
             </div>
             <div className="legal-content">
-              {/* <div className="update-meta">
-                <span>Graphic design</span>
+              <div className="update-meta">
                 <span>August 28, 2025</span>
-              </div> */}
+                <span>Name</span>
+              </div>
               <h4 className="update-title">The Correct View On Trial Court’s Powers U/S 173(8) Cr.P.C</h4>
             </div>
           </div>

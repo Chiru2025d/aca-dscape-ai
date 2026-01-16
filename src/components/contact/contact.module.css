@@ -19,7 +19,7 @@
 
 .contactPage {
   padding: 90px 0;
-  background: #ffffff;
+  background: #F4F2EE;
 }
 
 .container {
@@ -96,7 +96,6 @@
 /* Office Info Box */
 
 .officeBox {
-  padding: 22px 0; /* keep spacing, remove box look */
   background: transparent;
   max-width: 520px;
 }
@@ -116,6 +115,45 @@
   font-size: 15px;
   line-height: 1.6;
   color: #4b5563;
+}
+
+.officeRow a {
+  text-decoration: none;
+}
+
+/* PRACTICE AREAS BUTTON IN OFFICE INFO */
+
+.practiceAreasBtn {
+  background: #bda588;
+  border: 1px solid #bda588;
+  border-radius: 3px;
+  color: white;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-left: 32px;
+}
+
+.practiceAreasBtn:hover {
+  background: #a89470;
+  border-color: #a89470;
+}
+
+/* BUTTON ROW */
+
+.buttonRow {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.buttonRow a {
+  text-decoration: none;
 }
 
 /* ===============================
@@ -153,8 +191,8 @@
 
 .formSection {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 64px;
   align-items: start;
 }
 
@@ -190,14 +228,14 @@
   height: 52px;
   padding: 0 12px;
   margin-bottom: 38px;
-  border: 1px solid #767676;
-  border-radius: 2.5px;
+  border: 1px solid #CED4DA;
+  border-radius: 8px;
   font-family: "Be Vietnam Pro", sans-serif;
   font-weight: 300;
   font-size: 15px;
   color: #66717a;
   outline: none;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.50);
 }
 
 .formInput::placeholder {
@@ -213,19 +251,19 @@
 ================================ */
 
 .formTextarea {
-  width: 654px;
+  width: 100%;
   height: 168px;
   padding: 12px;
   margin-bottom: 36px;
-  border: 1px solid #767676;
-  border-radius: 2.5px;
+  border: 1px solid #CED4DA;
+  border-radius: 8px;
   font-family: "Be Vietnam Pro", sans-serif;
   font-weight: 300;
   font-size: 15px;
   color: #66717a;
   outline: none;
   resize: none;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.50);
 }
 
 .formTextarea::placeholder {
@@ -271,13 +309,13 @@
 .teamCard {
   display: flex;
   gap: 16px;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .teamCard img {
-  width: 96px;
-  height: 96px;
-  border-radius: 48%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   object-fit: cover;
 }
 

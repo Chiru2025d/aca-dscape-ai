@@ -178,21 +178,21 @@
 }
 
 .hero-content {
-    position: relative;
-    height: auto;
-    /* Adjusted top padding since dots are above now */
+    position: absolute;
+    inset: 0;
+    display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: center;
-    background-color: #FDFBF7;
-    order: 3;
+    background: transparent;
+    pointer-events: none;
 }
 
 .hero-button-overlay {
-    position: absolute;
-    /* left: 654px; */
-    top: 475px;
+    position: relative;
+    pointer-events: auto;
     z-index: 10;
+    transform: translateY(210px);
 }
 
 .hero-practice-btn {
@@ -912,7 +912,7 @@
 /* --- Laptop/Desktop (Auto Scaling) --- */
 .culture-section {
     padding: 49px 0px 94px;
-    background-color: #FDFBF7;
+    background-color: #F0E8DF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1310,7 +1310,7 @@
     border-radius: 4px;
     margin-bottom: 15px;
     position: relative;
-    border: 3px solid #000000;
+    border: 0.25px solid #000;
 }
 
 .img-wrap img {
@@ -1319,7 +1319,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     opacity: 0;
     transition: opacity 0.5s ease;
     z-index: 1;
@@ -1478,12 +1478,16 @@
     /* max-width: 97%; */
     margin-bottom: 24px;
     line-height: 25px;
+    padding-left: 0px;
+    padding-right: 20px;
 }
 
 .founder-bio-container {
     max-height: 420px;
     overflow-y: auto;
     padding-right: 0px;
+    padding-left: 0px;
+    margin-top: 11px;
 }
 
 .founder-bio-container::-webkit-scrollbar {
@@ -1518,7 +1522,7 @@
     width: 100%;
     height: 467px;
     box-shadow: none;
-    object-fit: contain;
+    /* object-fit: cover; */
     border-radius: 6px;
 }
 
@@ -1691,9 +1695,12 @@
 }
 
 .team-preview h3 {
-    font-size: 2.5rem;
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
     margin-bottom: 40px;
-    color: var(--color-dark);
+    color: #1A1A1A;
+    text-transform: none;
 }
 
 .team-cards {
@@ -1743,7 +1750,7 @@
 
 .team-member-name {
     font-family: var(--font-heading);
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.25rem;
     color: #173E62;
     margin-top: 0;
@@ -1771,13 +1778,14 @@
     background-color: #173E62A6;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
     color: #FFFFFF;
-    padding: 10px;
+    padding: 20px 10px;
     text-align: center;
+    z-index: 10;
 }
 
 .team-img-wrapper:hover .team-overlay {
@@ -1849,9 +1857,9 @@
 
 /* --- Laptop/Desktop (Auto Scaling) --- */
 .legal-preview {
-    padding: 100px 0;
+    padding: 70px 0;
     text-align: center;
-    background-color: #FDFBF7;
+    background-color: #fff5ea;
 }
 
 .legal-section-tag {
@@ -1883,16 +1891,17 @@
 
 .legal-title {
     font-family: 'Be Vietnam', sans-serif;
-    font-size: 56px;
+    font-size: 30px;
     font-weight: 500;
     color: #1A1A1A;
     margin-bottom: 24px;
     line-height: 1.2;
+    text-transform: none;
 }
 
 .legal-desc {
-    max-width: 800px;
-    margin: 0 auto 60px;
+    /* max-width: 800px; */
+    margin: 0 auto 40px;
     font-family: 'Be Vietnam', sans-serif;
     font-size: 18px;
     color: #4F4F4F;
@@ -1971,7 +1980,7 @@
 .update-title {
     font-family: 'Be Vietnam', sans-serif;
     font-weight: 200;
-    font-size: 1.35rem;
+    font-size: 1.1rem;
     line-height: 1.4;
     color: #6d6b6b;
     margin: 0;
@@ -2091,6 +2100,14 @@
 
 .contact-group {
     margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
 }
 
 .contact-label {

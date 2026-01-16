@@ -1,5 +1,6 @@
 import Header from "../../components/header.jsx";
 import Footer from "../../components/footer.jsx";
+import FloatingContact from "../../components/floatingcontact.jsx";
 
 import OfficeInfo from "../../components/contact/office-info.jsx";
 import ContactForm from "../../components/contact/contact-form.jsx";
@@ -24,6 +25,7 @@ export default function ContactPage() {
       </section>
 
       <Footer />
+      <FloatingContact />
     </>
   );
 }

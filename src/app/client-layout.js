@@ -1,10 +1,11 @@
-import HomePage from "@/components/home";
+"use client";
+
 import FloatingContact from "@/components/floatingcontact";
 
-export default function Home() {
+export default function ClientLayout({ children }) {
   return (
     <>
-      <HomePage />
+      {children}
       <FloatingContact />
     </>
   );

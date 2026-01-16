@@ -9,23 +9,15 @@ const teamMembers = [
     role: "Advocate – Head Associate",
     phone: "+91 98451 13678",
     email: "amar.correa@acajuris.com",
-    image: "/images/team1@2x.webp",
+    image: "/images/team1.png",
     imageSrcSet: "/images/team1@2x.webp 2x, /images/team1@3x.webp 3x",
-  },
-  {
-    name: "Raveesh Posavalike",
-    role: "Advocate – Senior Associate",
-    phone: "+91 94818 08378",
-    email: "raveesh.p@acajuris.com",
-    image: "/images/team2@2x.webp",
-    imageSrcSet: "/images/team2@2x.webp 2x, /images/team2@3x.webp 3x",
   },
   {
     name: "Shridevi M. Bhosale",
     role: "Advocate – Senior Associate",
     phone: "+91 77956 11707",
     email: "shridevi.b@acajuris.com",
-    image: "/images/team3@2x.webp",
+    image: "/images/team3.png",
     imageSrcSet: "/images/team3@2x.webp 2x, /images/team3@3x.webp 3x",
   },
 ];
@@ -41,10 +33,10 @@ export default function TeamContacts() {
             <Image
               src={member.image}
               alt={member.name}
-              width={60}
-              height={60}
+              width={80}
+              height={80}
               quality={90}
-              sizes="60px"
+              sizes="80px"
             />
           </div>
 

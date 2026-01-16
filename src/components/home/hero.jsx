@@ -150,13 +150,8 @@ export default function Hero() {
 
       {/* Content Overlay */}
       <div className="hero-content container">
-        <div 
-          className="hero-button-overlay"
-          style={{
-            left: '50%',
-            transform: 'translateX(-50%)'
-          }}
-        >
+        {/* Practice Areas Button */}
+        <div className="hero-button-overlay">
           <Link href="/expertise">
             <button className="hero-practice-btn">Practice Areas →</button>
           </Link>

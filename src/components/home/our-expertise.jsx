@@ -57,7 +57,7 @@ export default function ExpertisePreview() {
                 width={305}
                 height={336}
                 className={idx === aopIndex ? "active" : ""}
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: 'contain' }}
               />
             ))}
           </div>

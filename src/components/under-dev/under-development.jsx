@@ -1,30 +1,41 @@
-import Image from 'next/image';
 import Header from '../header.jsx';
 
 export default function UnderDevelopment() {
     return (
-        <>
+        <div style={{ 
+            backgroundColor: '#E8E5DE', 
+            minHeight: '100vh',
+            margin: '-100px 0 0 0',
+            padding: 0,
+            display: 'flex',
+            flexDirection: 'column'
+        }}>
             <Header />
             <div style={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                minHeight: 'calc(100vh - 100px)', // Adjust for header height
-                backgroundColor: '#F4F2EE',
-                padding: '20px'
+                flex: 1,
+                padding: '40px 20px'
             }}>
-                <div style={{ position: 'relative', width: '100%', maxWidth: '800px', height: 'auto', aspectRatio: '16/9' }}>
-                    <Image
-                        src="/images/page_under_devlopment@2x.webp"
+                <div style={{ 
+                    width: '100%', 
+                    maxWidth: '1200px', 
+                    textAlign: 'center'
+                }}>
+                    <img
+                        src="/images/Under Development.png"
                         alt="Page Under Development"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                        priority
-                        quality={90}
-                        sizes="(max-width: 768px) 100vw, 800px"
+                        style={{ 
+                            width: '100%', 
+                            height: 'auto',
+                            maxWidth: '100%',
+                            display: 'block',
+                            margin: '0 auto'
+                        }}
                     />
                 </div>
             </div>
-        </>
+        </div>
     );
 }

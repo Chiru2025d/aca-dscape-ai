@@ -1,0 +1,61 @@
+/* ===============================
+   FLOATING CONTACT BUTTONS
+================================ */
+
+.floatingContainer {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.floatingBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #bda588;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.floatingBtn:hover {
+  background: #a89470;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.floatingBtn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .floatingContainer {
+    right: 15px;
+    bottom: 20px;
+    gap: 12px;
+  }
+
+  .floatingBtn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .floatingBtn img {
+    width: 20px;
+    height: 20px;
+  }
+}

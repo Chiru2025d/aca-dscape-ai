@@ -46,11 +46,11 @@ export default function Founder() {
                     <div className="founder-text">
                         <span className="founder-label">Head Associate</span>
                         <h2 className="founder-name">Amar Correa</h2>
-                        <span className="founder-role">Amar Correa, heads ACA Juris.</span>
+                        <span className="founder-role"></span>
 
                         <div className="founder-bio-container">
                             <p className="founder-bio">
-                                A professional journey extending over 25 years, which began with engagements
+                                Amar Correa, heads ACA Juris. A professional journey extending over 25 years, which began with engagements
                                 in criminal litigations at the grass roots level, before the Courts of Magistrates.
                                 His practice gradually progressed to representing, defending and prosecuting
                                 clients in serious Sessions Cases and matters pertaining to Special Laws. Over
@@ -91,11 +91,18 @@ export default function Founder() {
                         </div>
                     </div>
 
-                    <div className="founder-img-wrap" style={{'--founder-img-width': '423px', '--founder-img-height': '475px'}}>
+                    <div className="founder-img-wrap">
                         <span className="hidetext">&nbsp;</span>
                         <h2 className="hidetext">&nbsp;</h2>
                         <span className="hidetext">&nbsp;</span>
-                        <img alt="Amar Correa" loading="lazy" width="400" height="600" decoding="async" data-nimg="1" className="founderImg" style={{color:'transparent',width:'100%',padding:'25px'}} src="/images/amar.png" />
+                         <Image
+                            src="/images/amar.png"
+                            alt="Amar Correa"
+                            className=''
+                            width={400}
+                            height={600}
+                            style={{ width: '100%',padding:'29px' }}
+                        />
                     </div>
                 </div>
             </div>
