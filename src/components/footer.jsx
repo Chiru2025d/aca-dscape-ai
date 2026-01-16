@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -17,25 +16,11 @@ export default function Footer() {
             <div className="contact-left">
 
               <div className="contact-group">
-                <Image 
-                  src="/icons/whatsapp.svg" 
-                  alt="WhatsApp" 
-                  width={24} 
-                  height={24}
-                  className="contact-icon"
-                />
                 <span className="contact-label">Whatsapp</span>
                 <p className="contact-value">+91 96638 12090</p>
               </div>
 
               <div className="contact-group">
-                <Image 
-                  src="/icons/mail-new.svg" 
-                  alt="Email" 
-                  width={24} 
-                  height={24}
-                  className="contact-icon"
-                />
                 <span className="contact-label">Email me</span>
                 <p className="contact-value">office@acajuris.com</p>
               </div>

@@ -2100,14 +2100,6 @@
 
 .contact-group {
     margin-bottom: 25px;
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-}
-
-.contact-icon {
-    flex-shrink: 0;
-    margin-top: 2px;
 }
 
 .contact-label {
