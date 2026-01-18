@@ -1429,12 +1429,12 @@
     width: 1350px;
     height: 690px;
     margin: 0 auto;
-    
+    gap: 40px;
 }
 
 .founder-text {
     flex: 1;
-    padding-top: 20px;
+    padding-top: 0px;
 }
 
 .founder-label {
@@ -1483,7 +1483,7 @@
 }
 
 .founder-bio-container {
-    max-height: 420px;
+    max-height: 494px;
     overflow-y: auto;
     padding-right: 0px;
     padding-left: 0px;
@@ -1509,7 +1509,6 @@
     /* display: flex; */
     align-items: flex-start;
     justify-content: flex-start;
-    min-height: 600px;
     height: 100%;
     background-color: transparent;
     border-radius: 0;

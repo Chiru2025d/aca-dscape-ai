@@ -43,13 +43,6 @@ export default function OfficeInfo() {
               <p className={styles.officeContact}>office@acajuris.com</p>
             </div>
 
-            {/* PRACTICE AREAS BUTTON */}
-            <div className={styles.buttonRow}>
-              <Link href="/expertise">
-                <button className={styles.practiceAreasBtn}>Practice Areas →</button>
-              </Link>
-            </div>
-
             {/* PHONE */}
             <div className={styles.officeRow}>
               <span className={styles.icon}>
